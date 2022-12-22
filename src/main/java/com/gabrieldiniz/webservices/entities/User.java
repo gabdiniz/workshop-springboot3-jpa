@@ -1,12 +1,15 @@
 package com.gabrieldiniz.webservices.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -22,6 +25,9 @@ public class User implements Serializable{
 	private String email;
 	private String phone;
 	private String password;
+	
+	@OneToMany(mappedBy = "client")
+	private List <Order> orders = new ArrayList<>();
 	
 	public User () {
 	}
@@ -77,6 +83,18 @@ public class User implements Serializable{
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
+	}
+
+	public List<Order> getOrders() {
+		return orders;
+	}
+	
+	public void listAdd (Order order) {
+		orders.add(order);
+	}
+	
+	public void listRemove (Order order) {
+		orders.remove(order);
 	}
 
 	@Override
