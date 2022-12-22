@@ -91,14 +91,6 @@ public class User implements Serializable{
 	public List<Order> getOrders() {
 		return orders;
 	}
-	
-	public void listAdd (Order order) {
-		orders.add(order);
-	}
-	
-	public void listRemove (Order order) {
-		orders.remove(order);
-	}
 
 	@Override
 	public boolean equals(Object obj) {
