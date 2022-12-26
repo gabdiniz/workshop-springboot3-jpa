@@ -8,7 +8,7 @@ Esta é uma aplicação Back end construída durante o curso de Java Completo da
 A aplicação é uma API de CRUD com todas as camadas lógicas: resource, service e repository, desenvolvida com Java e Spring Boot 3, utilizando JPA e Hibernate
 
 ## Modelo de domínio
-![imagem](https://github.com/luccasocastro/workshop-springboot3-jpa/blob/main/modeloDeDominio.png)
+![imagem](https://raw.githubusercontent.com/luccasocastro/workshop-springboot3-jpa/main/modeloDeDominio.png)
 
 # Tecnologias utilizadas
 ## Back end
